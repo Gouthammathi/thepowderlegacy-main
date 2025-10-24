@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { fetchProducts } from '../../services/products'
 import RecentlyViewed from '../RecentlyViewed'
 import WhyChooseUs from '../home/WhyChooseUs'
@@ -78,8 +79,8 @@ function Home() {
 
           {/* Elegant CTA Button */}
           <div className="flex justify-end mt-1 sm:mt-2 mr-8 sm:mr-55">
-            <a
-              href="#products"
+            <Link
+              to="/shop"
               className="bg-gradient-to-r from-[#2d5f3f] to-[#1e4029] hover:from-[#1e4029] hover:to-[#0f2a1a] text-white font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 text-center text-xs sm:text-sm border-2 border-white/30 hover:border-white/50 relative overflow-hidden"
               style={{
                 textShadow: '0 0 10px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.2)',
@@ -92,7 +93,7 @@ function Home() {
             >
               <span className="relative z-10">Explore Heritage</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full hover:translate-x-full transition-transform duration-700"></div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
