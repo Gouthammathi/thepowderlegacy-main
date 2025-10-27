@@ -89,7 +89,7 @@ function Header() {
 
       {/* Main Header */}
       <header className="bg-white border-b border-stone-200 sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-18">
             {/* Logo */}
             <div className="flex-shrink-0">
@@ -97,13 +97,13 @@ function Header() {
                 <img 
                   src="/logo.png" 
                   alt="The Powder Legacy" 
-                  className="h-14 w-14 object-contain transition-transform group-hover:scale-105" 
+                  className="h-10 w-10 sm:h-14 sm:w-14 object-contain transition-transform group-hover:scale-105" 
                 />
-                <div className="block">
-                  <div className="text-lg sm:text-2xl font-bold text-[#2d5f3f] tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
+                <div className="hidden xs:block">
+                  <div className="text-sm sm:text-2xl font-bold text-[#2d5f3f] tracking-tight" style={{ fontFamily: 'Playfair Display, serif' }}>
                     The Powder Legacy
                   </div>
-                  <div className="text-xs text-[#8b9d83] font-medium tracking-wide">
+                  <div className="text-xs text-[#8b9d83] font-medium tracking-wide hidden sm:block">
                     Timeless Natural Care
                   </div>
                 </div>
@@ -155,7 +155,7 @@ function Header() {
             </nav>
 
             {/* Right Actions */}
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-0.5">
               {/* Favorites */}
               <Link 
                 to="/favorites" 
@@ -168,12 +168,12 @@ function Header() {
               {/* Cart */}
               <Link 
                 to="/cart" 
-                className="relative p-2.5 text-stone-700 hover:text-[#2d5f3f] hover:bg-[#f5f5f4] rounded-lg transition-all"
+                className="relative p-2 sm:p-2.5 text-stone-700 hover:text-[#2d5f3f] hover:bg-[#f5f5f4] rounded-lg transition-all"
                 aria-label="Shopping Cart"
               >
-                <ShoppingCart size={20} />
+                <ShoppingCart size={18} className="sm:w-5 sm:h-5" />
                 {getCartItemsCount() > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-[#d4a574] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold shadow-md">
+                  <span className="absolute -top-1 -right-1 bg-[#d4a574] text-white text-xs rounded-full h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center font-semibold shadow-md text-[10px] sm:text-xs">
                     {getCartItemsCount()}
                   </span>
                 )}
@@ -251,12 +251,12 @@ function Header() {
               {/* Mobile Account Button */}
               <Link 
                 to={currentUser ? "/account" : "/login"} 
-                className="lg:hidden relative p-2.5 text-stone-700 hover:text-[#2d5f3f] hover:bg-[#f5f5f4] rounded-lg transition-all"
+                className="lg:hidden relative p-2 text-stone-700 hover:text-[#2d5f3f] hover:bg-[#f5f5f4] rounded-lg transition-all"
                 aria-label="Account"
               >
-                <User size={20} />
+                <User size={18} />
                 {currentUser && profileName && (
-                  <span className="absolute -bottom-0.5 -right-0.5 bg-[#2d5f3f] text-white text-[9px] leading-none rounded-full px-1.5 py-0.5 font-semibold">
+                  <span className="absolute -bottom-0.5 -right-0.5 bg-[#2d5f3f] text-white text-[9px] leading-none rounded-full px-1 py-0.5 font-semibold">
                     {profileName.split(' ').map(p => p[0]).join('').slice(0,2).toUpperCase()}
                   </span>
                 )}
@@ -265,10 +265,10 @@ function Header() {
               {/* Mobile Menu Toggle */}
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)} 
-                className="lg:hidden p-2.5 text-stone-700 hover:text-[#2d5f3f] hover:bg-[#f5f5f4] rounded-lg transition-all ml-2"
+                className="lg:hidden p-2 text-stone-700 hover:text-[#2d5f3f] hover:bg-[#f5f5f4] rounded-lg transition-all ml-1"
                 aria-label="Menu"
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
             </div>
           </div>

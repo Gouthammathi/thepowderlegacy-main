@@ -35,7 +35,7 @@ function Home() {
           />
         </div>
         
-        <div className="relative z-10 flex flex-col items-center justify-end px-4 sm:px-6 lg:px-8 w-full h-full pt-80 sm:pb-20 md:pb-40">
+        <div className="relative z-10 flex flex-col items-center justify-end px-4 sm:px-6 lg:px-8 w-full h-full pt-60 sm:pb-20 md:pb-40">
           
           {/* Elegant Welcome Content */}
           <div className="text-center mb-2 sm:mb-3 md:mb-4 w-full px-3 sm:px-4">
@@ -54,7 +54,7 @@ function Home() {
           </div>
 
           {/* Elegant CTA Button */}
-          <div className="flex justify-center mt-0 mb-0">
+          <div className="flex justify-center mt-0 mb-10">
             <Link
               to="/shop"
               className="bg-gradient-to-r from-[#2d5f3f] to-[#1e4029] hover:from-[#1e4029] hover:to-[#0f2a1a] text-white font-bold py-2 sm:py-2.5 px-5 sm:px-6 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 text-center text-xs sm:text-sm border-2 border-white/30 hover:border-white/50 relative overflow-hidden"
