@@ -26,62 +26,38 @@ function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Traditional Family Image */}
-      <section className="relative w-full aspect-video flex items-center justify-center overflow-hidden">
+      <section className="relative w-full min-h-[60vh] sm:min-h-[70vh] md:aspect-video flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/banner2.png"
+            src="/images/bannerr.png"
             alt="Traditional Indian family using natural powders"
             className="w-full h-full object-cover"
           />
         </div>
         
-        <div className="relative z-10 flex flex-col items-end justify-start px-4 sm:px-6 lg:px-8 w-full h-full pt-8 sm:pt-34">
-
+        <div className="relative z-10 flex flex-col items-center justify-end px-4 sm:px-6 lg:px-8 w-full h-full pt-80 sm:pb-20 md:pb-40">
+          
           {/* Elegant Welcome Content */}
-          <div className="text-right mb-4 sm:mb-6 max-w-2xl px-4">
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black mb-1 sm:mb-2 leading-tight" 
-                style={{ 
-                  fontFamily: 'Playfair Display, serif',
-                  letterSpacing: '0.04em',
-                  background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 25%, #FFD700 50%, #FF8C00 75%, #FFD700 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  fontWeight: '900',
-                  textTransform: 'uppercase'
-                }}>
-              The Powder Legacy
-            </h1>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white drop-shadow-xl mb-1 sm:mb-2" 
+          <div className="text-center mb-2 sm:mb-3 md:mb-4 w-full px-3 sm:px-4">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white drop-shadow-lg max-w-2xl sm:max-w-3xl mx-auto leading-relaxed" 
                style={{ 
                  fontFamily: 'Playfair Display, serif',
-                 textShadow: '0 0 15px rgba(255,255,255,0.5), 0 0 30px rgba(255,255,255,0.3), 0 0 45px rgba(255,255,255,0.1)',
-                 letterSpacing: '0.02em',
-                 background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%)',
-                 WebkitBackgroundClip: 'text',
-                 WebkitTextFillColor: 'transparent',
-                 backgroundClip: 'text',
+                 textShadow: '0 3px 6px rgba(0,0,0,0.4), 0 6px 12px rgba(0,0,0,0.3), 0 0 30px rgba(255,255,255,0.5)',
+                 letterSpacing: '0.04em',
+                 lineHeight: '1.6',
                  fontStyle: 'italic',
-                 fontWeight: '600'
-               }}>
-              {/* Where Tradition Meets Natural Beauty */}
-            </p>
-            <p className="text-xs sm:text-sm md:text-base text-white/90 drop-shadow-lg max-w-lg mx-auto leading-relaxed" 
-               style={{ 
-                 fontFamily: 'Inter, system-ui, sans-serif',
-                 textShadow: '0 0 10px rgba(255,255,255,0.3), 0 0 20px rgba(255,255,255,0.1)',
-                 letterSpacing: '0.01em',
-                 lineHeight: '1.4'
+                 fontWeight: '600',
+                 color: '#ffffff'
                }}>
               Join families across generations who trust our authentic, chemical-free natural powders for their daily wellness and beauty rituals.
             </p>
           </div>
 
           {/* Elegant CTA Button */}
-          <div className="flex justify-end mt-1 sm:mt-2 mr-8 sm:mr-55">
+          <div className="flex justify-center mt-0 mb-0">
             <Link
               to="/shop"
-              className="bg-gradient-to-r from-[#2d5f3f] to-[#1e4029] hover:from-[#1e4029] hover:to-[#0f2a1a] text-white font-bold py-1.5 sm:py-2.5 px-4 sm:px-6 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 text-center text-xs sm:text-sm border-2 border-white/30 hover:border-white/50 relative overflow-hidden"
+              className="bg-gradient-to-r from-[#2d5f3f] to-[#1e4029] hover:from-[#1e4029] hover:to-[#0f2a1a] text-white font-bold py-2 sm:py-2.5 px-5 sm:px-6 rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 text-center text-xs sm:text-sm border-2 border-white/30 hover:border-white/50 relative overflow-hidden"
               style={{
                 textShadow: '0 0 10px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.2)',
                 letterSpacing: '0.03em',

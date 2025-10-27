@@ -8,13 +8,12 @@ import {
   LogOut, 
   Menu, 
   X,
-  Heading,
-  Image,
-  Tag
+  Heading2,
+  Image as ImageIcon,
+  Tag as TagIcon
 } from 'lucide-react'
 import { useAdmin } from '../../contexts/AdminContext'
 import ProductsManager from '../admin/ProductsManager'
-import HomeContentManager from '../admin/HomeContentManager'
 import HeaderContentManager from '../admin/HeaderContentManager'
 import HeroSlidesManager from '../admin/HeroSlidesManager'
 import CouponManager from '../admin/CouponManager'
@@ -34,11 +33,10 @@ function AdminDashboard() {
 
   const menuItems = [
     { id: 'overview', label: 'Overview', icon: <LayoutDashboard size={20} /> },
-    { id: 'hero', label: 'Hero Carousel', icon: <Image size={20} /> },
+    { id: 'hero', label: 'Hero Carousel', icon: <ImageIcon size={20} /> },
     { id: 'products', label: 'Products Manager', icon: <Package size={20} /> },
-    { id: 'coupons', label: 'Coupon Manager', icon: <Tag size={20} /> },
-    { id: 'home', label: 'Home Content', icon: <Home size={20} /> },
-    { id: 'header', label: 'Header Content', icon: <Heading size={20} /> },
+    { id: 'coupons', label: 'Coupon Manager', icon: <TagIcon size={20} /> },
+    { id: 'header', label: 'Header Content', icon: <Heading2 size={20} /> },
     { id: 'settings', label: 'Settings', icon: <Settings size={20} /> },
   ]
 
@@ -179,7 +177,7 @@ function AdminDashboard() {
 
               <div className="bg-white rounded-lg shadow-sm p-4">
                 <h3 className="text-base font-bold text-gray-900 mb-3">Quick Actions</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                   <button
                     onClick={() => setActiveTab('products')}
                     className="p-4 border-2 border-emerald-200 rounded-lg hover:bg-emerald-50 transition-colors text-left"
@@ -190,19 +188,10 @@ function AdminDashboard() {
                   </button>
 
                   <button
-                    onClick={() => setActiveTab('home')}
-                    className="p-4 border-2 border-blue-200 rounded-lg hover:bg-blue-50 transition-colors text-left"
-                  >
-                    <Home className="text-blue-800 mb-2" size={24} />
-                    <h4 className="font-semibold text-gray-900">Edit Home Content</h4>
-                    <p className="text-sm text-gray-600">Update homepage sections</p>
-                  </button>
-
-                  <button
                     onClick={() => setActiveTab('header')}
                     className="p-4 border-2 border-purple-200 rounded-lg hover:bg-purple-50 transition-colors text-left"
                   >
-                    <Heading className="text-purple-800 mb-2" size={24} />
+                    <Heading2 className="text-purple-800 mb-2" size={24} />
                     <h4 className="font-semibold text-gray-900">Header Settings</h4>
                     <p className="text-sm text-gray-600">Customize header content</p>
                   </button>
@@ -223,7 +212,6 @@ function AdminDashboard() {
           {activeTab === 'hero' && <HeroSlidesManager />}
           {activeTab === 'products' && <ProductsManager />}
           {activeTab === 'coupons' && <CouponManager />}
-          {activeTab === 'home' && <HomeContentManager />}
           {activeTab === 'header' && <HeaderContentManager />}
           
           {activeTab === 'settings' && (
